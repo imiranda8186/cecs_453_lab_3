@@ -10,6 +10,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text("Scrollable List"),
@@ -20,28 +21,61 @@ class MainApp extends StatelessWidget {
           children: <Widget>[
             //This is where all the images and captions will go
             Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                Image.asset('assets/images/lake1.jpg', height: 700, width: double.infinity, fit: BoxFit.cover),
+                Container(
+                  padding: EdgeInsets.all(12),
+                  color: Colors.grey,
+                  child: Text("Positive Affirmation Text Goes Here", textAlign: TextAlign.center, style: TextStyle(fontSize: 25))
+                )
 
-                Text("Text 1")
               ]
             ), 
             
             SizedBox(height: 20),
 
             Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text("Text 2")
+                Image.asset('assets/images/lake2.jpg', height: 700, width: double.infinity, fit: BoxFit.cover),
+                Container(
+                  padding: EdgeInsets.all(12),
+                  color: Colors.grey,
+                  child: Text("Positive Affirmation Text Goes Here", textAlign: TextAlign.center, style: TextStyle(fontSize: 25))
+                )
               ]
             ), 
 
             SizedBox(height: 20), 
 
             Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Text("Text 3")
+                Image.asset('assets/images/lake3.jpeg', height: 700, width: double.infinity, fit: BoxFit.cover),
+                Container(
+                  padding: EdgeInsets.all(12),
+                  color: Colors.grey,
+                  child: Text("Positive Affirmation Text Goes Here", textAlign: TextAlign.center, style: TextStyle(fontSize: 25))
+                )
               ]
-
             ), 
+
+            SizedBox(height: 20),
+
+            
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Image.asset('assets/images/beachsunset.jpg', height: 700, width: double.infinity, fit: BoxFit.cover),
+                Container(
+                  padding: EdgeInsets.all(12),
+                  color: Colors.grey,
+                  child: Text("Positive Affirmation Text Goes Here", textAlign: TextAlign.center, style: TextStyle(fontSize: 25))
+                )
+              ]
+            ),
+
           ]
         )
       ),
